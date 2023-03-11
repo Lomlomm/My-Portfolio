@@ -4,13 +4,20 @@
     font-weight: 300;
     font-size: large;
     max-width: 100%;
-
 }
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: clip;
     scroll-behavior: smooth;
 } 
+
 #header{
     background-color: #6d5050b6;
     height: 96px;
@@ -27,9 +34,7 @@ a{
     text-decoration: none;
     color: #FFFFFF;
 }
-.aboutme > a{
-    font-family: 'Libre Baskerville', serif;
-}
+.aboutme > a,
 .blog > a{
     font-family: 'Nunito', sans-serif;
 }
@@ -41,9 +46,6 @@ a{
     font-weight: 600;
     font-style: italic;
     margin-bottom: 10px;
-}
-.where{
-    font-weight: 400;
 }
 .centever{
     display: flex;
@@ -98,3 +100,30 @@ img{
     width: auto;
     float: right;
 }
+
+.where > a{
+    color: rgba(0, 0, 0, 0.768);
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.where>a:hover{
+    color: #000000;
+}
+.where > a:after{
+    content: "";
+    position: absolute;
+    background-color: #d73737;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+.where >a:hover:after{
+    width: 100%;
+
+}
+
