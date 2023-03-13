@@ -30,6 +30,9 @@ html, body {
 body{
     position: inherit;
 }
+.all{
+    position: relative;
+}
 a{
     text-decoration: none;
     color: #FFFFFF;
@@ -49,8 +52,9 @@ a{
 }
 .centever{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
 }
 .everything{
     margin-top: 80px;
@@ -89,6 +93,23 @@ img{
 .links{
     text-decoration: solid #000000;
 }
+.side{
+    height: 300%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    background-color: #ff77ad55;
+    display: none;
+    
+}
+.side > .title{
+    margin-top: 150px;
+    margin-left: 40px;
+}
+
 .sticky{
     position: sticky;
     bottom: 0;
@@ -127,3 +148,6 @@ img{
 
 }
 
+#nasatxt{
+    font-size: 17px;
+}
